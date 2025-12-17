@@ -1,0 +1,45 @@
+{
+  "name": "@rd/eslint-config",
+  "version": "1.0.0",
+  "private": false,
+  "description": "ESLint configuration used by Rubinho.",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "prettier",
+    "typescript",
+    "react",
+    "nextjs",
+    "expo",
+    "tailwindcss"
+  ],
+  "files": [
+    "node.js",
+    "node-with-semi.js",
+    "react.js",
+    "next.js",
+    "expo.js",
+    "index.js",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devrubinho/rubinho-eslint-config.git"
+  },
+  "dependencies": {
+    "eslint": "^8.57.1",
+    "prettier": "^3.7.4",
+    "@typescript-eslint/parser": "^8.50.0",
+    "@typescript-eslint/eslint-plugin": "^8.50.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-import": "^2.31.0",
+    "prettier-plugin-tailwindcss": "^0.7.2"
+  }
+}

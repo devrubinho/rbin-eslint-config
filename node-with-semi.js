@@ -1,0 +1,73 @@
+// ────────────────────────────────
+// Node.js ESLint Config (com ponto e vírgula)
+// ────────────────────────────────
+// Esta configuração é para projetos Node.js que USAM ponto e vírgula.
+// Use esta configuração se preferir código com ponto e vírgula (padrão tradicional).
+// Para versão sem ponto e vírgula, use: node.js
+
+module.exports = {
+  env: {
+    es2021: true,
+    node: true,
+  },
+  extends: ['standard', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint', 'import'],
+  rules: {
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
+    'import/no-unresolved': 'off',
+    'import/no-duplicates': 'error',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+      },
+    ],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'prettier/prettier': [
+      'error',
+      {
+        printWidth: 80,
+        tabWidth: 2,
+        useTabs: false,
+        singleQuote: true,
+        trailingComma: 'all',
+        arrowParens: 'always',
+        semi: true,
+        endOfLine: 'lf',
+        bracketSpacing: true,
+        bracketSameLine: false,
+      },
+    ],
+  },
+  settings: {
+    'import/parsers': {
+      [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
+    },
+  },
+}
+
