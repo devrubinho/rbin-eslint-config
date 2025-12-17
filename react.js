@@ -1,8 +1,6 @@
 // ────────────────────────────────
 // React ESLint Config
 // ────────────────────────────────
-// Esta configuração NÃO usa ponto e vírgula (semi: false).
-// Apenas as configurações Node.js podem ter opção de ponto e vírgula.
 
 module.exports = {
   env: {
@@ -20,10 +18,10 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: [
     'react',
@@ -50,7 +48,7 @@ module.exports = {
         },
       },
     ],
-    "react/self-closing-comp": "error",
+    'react/self-closing-comp': 'error',
     'prettier/prettier': [
       'error',
       {
@@ -113,7 +111,5 @@ module.exports = {
       [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
     },
   },
-  ignorePatterns: [
-    'node_modules'
-  ]
+  ignorePatterns: ['node_modules'],
 }

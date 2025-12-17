@@ -1,12 +1,10 @@
 // ────────────────────────────────
 // Expo ESLint Config
 // ────────────────────────────────
-// Esta configuração NÃO usa ponto e vírgula (semi: false).
-// Apenas as configurações Node.js podem ter opção de ponto e vírgula.
 
 module.exports = {
   env: {
-    browser: true,
+    'react-native/react-native': true,
     es2021: true,
     jest: true,
   },
@@ -20,10 +18,10 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: [
     'react',
@@ -50,7 +48,7 @@ module.exports = {
         },
       },
     ],
-    "react/self-closing-comp": "error",
+    'react/self-closing-comp': 'error',
     'prettier/prettier': [
       'error',
       {
@@ -64,7 +62,6 @@ module.exports = {
         endOfLine: 'lf',
         bracketSpacing: true,
         bracketSameLine: false,
-        plugins: ['prettier-plugin-tailwindcss'],
       },
     ],
     'react/react-in-jsx-scope': 'off',
@@ -86,24 +83,29 @@ module.exports = {
     'jsx-a11y/alt-text': [
       'warn',
       {
-        elements: ['img'],
+        elements: ['Image'],
         img: ['Image'],
       },
     ],
-    'jsx-a11y/aria-props': 'warn',
-    'jsx-a11y/aria-proptypes': 'warn',
-    'jsx-a11y/aria-unsupported-elements': 'warn',
-    'jsx-a11y/role-has-required-aria-props': 'warn',
-    'jsx-a11y/role-supports-aria-props': 'warn',
-    'jsx-a11y/click-events-have-key-events': 'warn',
-    'jsx-a11y/no-static-element-interactions': 'warn',
-    'jsx-a11y/anchor-is-valid': 'warn',
-    'jsx-a11y/heading-has-content': 'warn',
-    'jsx-a11y/iframe-has-title': 'warn',
+    'jsx-a11y/aria-props': 'off',
+    'jsx-a11y/aria-proptypes': 'off',
+    'jsx-a11y/aria-unsupported-elements': 'off',
+    'jsx-a11y/role-has-required-aria-props': 'off',
+    'jsx-a11y/role-supports-aria-props': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'jsx-a11y/heading-has-content': 'off',
+    'jsx-a11y/iframe-has-title': 'off',
     'react/jsx-key': 'error',
     'react/no-array-index-key': 'warn',
-    'react/no-danger': 'warn',
-    'react/no-unknown-property': 'error',
+    'react/no-danger': 'off',
+    'react/no-unknown-property': [
+      'error',
+      {
+        ignore: ['style', 'className'],
+      },
+    ],
   },
   settings: {
     react: {
@@ -113,7 +115,5 @@ module.exports = {
       [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
     },
   },
-  ignorePatterns: [
-    'node_modules'
-  ]
+  ignorePatterns: ['node_modules'],
 }

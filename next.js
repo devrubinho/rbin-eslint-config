@@ -1,8 +1,6 @@
 // ────────────────────────────────
 // Next.js ESLint Config
 // ────────────────────────────────
-// Esta configuração NÃO usa ponto e vírgula (semi: false).
-// Apenas as configurações Node.js podem ter opção de ponto e vírgula.
 
 module.exports = {
   env: {
@@ -18,10 +16,10 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: [
     'jsx-a11y',
@@ -101,5 +99,6 @@ module.exports = {
     'import/parsers': {
       [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
     },
-  }
+  },
+  ignorePatterns: ['node_modules'],
 }

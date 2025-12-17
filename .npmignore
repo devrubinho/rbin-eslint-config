@@ -1,0 +1,15 @@
+node_modules/
+.task-flow/
+.cursor/
+.claude/
+CLAUDE.md
+*.test.js
+*.spec.js
+test-*
+test-project/
+*.tgz
+package-lock.json
+.git/
+.gitignore
+.eslintrc*
+.prettierrc*

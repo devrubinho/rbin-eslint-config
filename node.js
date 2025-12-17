@@ -1,9 +1,6 @@
 // ────────────────────────────────
 // Node.js ESLint Config (sem ponto e vírgula)
 // ────────────────────────────────
-// Esta configuração é para projetos Node.js que NÃO usam ponto e vírgula.
-// Use esta configuração se preferir código sem ponto e vírgula (padrão moderno).
-// Para versão com ponto e vírgula, use: node-with-semi.js
 
 module.exports = {
   env: {
