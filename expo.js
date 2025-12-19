@@ -14,6 +14,7 @@ module.exports = {
     'standard',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    'plugin:react-native/all',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -28,6 +29,7 @@ module.exports = {
     'jsx-a11y',
     '@typescript-eslint',
     'import',
+    'react-native',
   ],
   rules: {
     'import/order': [
@@ -80,13 +82,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
-    'jsx-a11y/alt-text': [
-      'warn',
-      {
-        elements: ['Image'],
-        img: ['Image'],
-      },
-    ],
+    'jsx-a11y/alt-text': 'off',
     'jsx-a11y/aria-props': 'off',
     'jsx-a11y/aria-proptypes': 'off',
     'jsx-a11y/aria-unsupported-elements': 'off',
