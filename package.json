@@ -26,7 +26,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/devrubinho/rubinho-eslint-config.git"
+    "url": "https://github.com/devrubinho/rbin-eslint-config.git"
   },
   "dependencies": {
     "eslint": "^8.57.1",
