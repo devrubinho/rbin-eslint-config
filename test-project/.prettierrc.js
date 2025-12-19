@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@rd/eslint-config/react').rules['prettier/prettier'][1],
+  ...require('@rbinflow/eslint-config/react').rules['prettier/prettier'][1],
 }

@@ -1,14 +1,39 @@
-# Projeto de Teste - @rd/eslint-config
+# Projeto de Teste - @rbinflow/eslint-config
 
-Este é um projeto de teste para validar o funcionamento do pacote `@rd/eslint-config`.
+Este é um projeto de teste para validar o funcionamento do pacote `@rbinflow/eslint-config`.
 
 ## Como usar
 
 1. Abra este projeto no VSCode
 2. Instale as dependências: `npm install` (já feito)
-3. Edite os arquivos em `src/` e veja o ESLint funcionando
-4. Salve o arquivo e observe os erros/avisos do ESLint
-5. Use `Cmd+Shift+P` → "ESLint: Fix all auto-fixable Problems" para corrigir automaticamente
+3. **IMPORTANTE**: Certifique-se de ter a extensão ESLint instalada no VSCode
+4. Recarregue a janela do VSCode: `Cmd+Shift+P` → "Developer: Reload Window"
+5. Edite os arquivos em `src/` e veja o ESLint funcionando
+6. Salve o arquivo (`Cmd+S`) - o ESLint deve corrigir automaticamente
+7. Se não funcionar, use `Cmd+Shift+P` → "ESLint: Fix all auto-fixable Problems"
+
+## Troubleshooting
+
+Se o ESLint não funcionar ao salvar:
+
+1. **Verifique se a extensão ESLint está instalada**:
+   - Abra Extensions (`Cmd+Shift+X`)
+   - Procure por "ESLint" (oficial da Microsoft)
+   - Instale se não estiver instalada
+
+2. **Recarregue a janela do VSCode**:
+   - `Cmd+Shift+P` → "Developer: Reload Window"
+
+3. **Verifique o Output do ESLint**:
+   - `View` → `Output`
+   - Selecione "ESLint" no dropdown
+   - Veja se há erros
+
+4. **Teste via CLI**:
+   ```bash
+   npm run lint        # Ver erros
+   npm run lint:fix    # Corrigir automaticamente
+   ```
 
 ## Arquivos de teste
 
@@ -28,22 +53,22 @@ Para testar outras configurações, altere o `.eslintrc.js`:
 ```javascript
 // Para Node.js (sem ponto e vírgula)
 module.exports = {
-  extends: ['@rd/eslint-config/node'],
+  extends: ['@rbinflow/eslint-config/node'],
 }
 
 // Para Node.js (com ponto e vírgula)
 module.exports = {
-  extends: ['@rd/eslint-config/node-with-semi'],
+  extends: ['@rbinflow/eslint-config/node-with-semi'],
 }
 
 // Para Next.js
 module.exports = {
-  extends: ['@rd/eslint-config/next'],
+  extends: ['@rbinflow/eslint-config/next'],
 }
 
 // Para Expo
 module.exports = {
-  extends: ['@rd/eslint-config/expo'],
+  extends: ['@rbinflow/eslint-config/expo'],
 }
 ```
 

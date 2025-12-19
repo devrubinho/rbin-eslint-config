@@ -1,11 +1,11 @@
-# @rd/eslint-config
+# @rbinflow/eslint-config
 
 <div align="center">
 
 **ESLint configuration package used by Rubinho**
 
-[![npm version](https://img.shields.io/npm/v/@rd/eslint-config)](https://www.npmjs.com/package/@rd/eslint-config)
-[![license](https://img.shields.io/npm/l/@rd/eslint-config)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/@rbinflow/eslint-config)](https://www.npmjs.com/package/@rbinflow/eslint-config)
+[![license](https://img.shields.io/npm/l/@rbinflow/eslint-config)](LICENSE)
 
 </div>
 
@@ -18,7 +18,7 @@ Este pacote fornece configurações ESLint e Prettier padronizadas para projetos
 ## 🚀 Instalação
 
 ```bash
-npm install --save-dev @rd/eslint-config
+npm install --save-dev @rbinflow/eslint-config
 ```
 
 ## 📦 Configurações Disponíveis
@@ -30,14 +30,14 @@ Este pacote oferece duas variantes para projetos Node.js:
 #### `node.js` - Sem ponto e vírgula (padrão moderno)
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/node'],
+  extends: ['@rbinflow/eslint-config/node'],
 }
 ```
 
 #### `node-with-semi.js` - Com ponto e vírgula (padrão tradicional)
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/node-with-semi'],
+  extends: ['@rbinflow/eslint-config/node-with-semi'],
 }
 ```
 
@@ -51,7 +51,7 @@ Todas as outras configurações são idênticas.
 
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/react'],
+  extends: ['@rbinflow/eslint-config/react'],
 }
 ```
 
@@ -59,7 +59,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/next'],
+  extends: ['@rbinflow/eslint-config/next'],
 }
 ```
 
@@ -67,7 +67,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/expo'],
+  extends: ['@rbinflow/eslint-config/expo'],
 }
 ```
 
@@ -79,7 +79,7 @@ Crie um arquivo `.eslintrc.js` na raiz do seu projeto:
 
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/react'],
+  extends: ['@rbinflow/eslint-config/react'],
 }
 ```
 
@@ -88,35 +88,35 @@ module.exports = {
 **Node.js (sem ponto e vírgula):**
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/node'],
+  extends: ['@rbinflow/eslint-config/node'],
 }
 ```
 
 **Node.js (com ponto e vírgula):**
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/node-with-semi'],
+  extends: ['@rbinflow/eslint-config/node-with-semi'],
 }
 ```
 
 **React:**
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/react'],
+  extends: ['@rbinflow/eslint-config/react'],
 }
 ```
 
 **Next.js:**
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/next'],
+  extends: ['@rbinflow/eslint-config/next'],
 }
 ```
 
 **Expo:**
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/expo'],
+  extends: ['@rbinflow/eslint-config/expo'],
 }
 ```
 
@@ -137,7 +137,7 @@ Você pode estender e personalizar as regras:
 
 ```javascript
 module.exports = {
-  extends: ['@rd/eslint-config/react'],
+  extends: ['@rbinflow/eslint-config/react'],
   rules: {
     // Suas regras personalizadas aqui
     'no-console': 'warn',
@@ -162,7 +162,7 @@ Este pacote funciona perfeitamente com a extensão ESLint oficial do VSCode.
 1. Instale a extensão [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) no VSCode
 2. Instale o pacote no seu projeto:
    ```bash
-   npm install --save-dev @rd/eslint-config
+   npm install --save-dev @rbinflow/eslint-config
    ```
 
 ### Configuração
@@ -170,7 +170,7 @@ Este pacote funciona perfeitamente com a extensão ESLint oficial do VSCode.
 1. Crie um arquivo `.eslintrc.js` na raiz do seu projeto:
    ```javascript
    module.exports = {
-     extends: ['@rd/eslint-config/react'],
+     extends: ['@rbinflow/eslint-config/react'],
    }
    ```
 
@@ -227,7 +227,7 @@ MIT © Rubinho
 
 ## 🔗 Links
 
-- [npm](https://www.npmjs.com/package/@rd/eslint-config)
+- [npm](https://www.npmjs.com/package/@rbinflow/eslint-config)
 - [Repositório](https://github.com/devrubinho/rubinho-eslint-config)
 
 ---

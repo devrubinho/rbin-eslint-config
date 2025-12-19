@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@rd/eslint-config/react'],
+  extends: ['@rbinflow/eslint-config/react'],
 }

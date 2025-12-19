@@ -1,6 +1,6 @@
 # Guia de Publicação no npm
 
-Este guia explica como publicar e atualizar o pacote `@rd/eslint-config` no npm.
+Este guia explica como publicar e atualizar o pacote `@rbinflow/eslint-config` no npm.
 
 ## Índice
 
@@ -17,7 +17,7 @@ Este guia explica como publicar e atualizar o pacote `@rd/eslint-config` no npm.
    ```bash
    npm login
    ```
-3. **Acesso ao escopo**: Certifique-se de ter permissão para publicar no escopo `@rd`
+3. **Acesso ao escopo**: Certifique-se de ter permissão para publicar no escopo `@rbinflow`
 
 ## Primeira Publicação
 
@@ -25,7 +25,7 @@ Este guia explica como publicar e atualizar o pacote `@rd/eslint-config` no npm.
 
 Certifique-se de que o `package.json` está configurado corretamente:
 
-- `name`: `@rd/eslint-config`
+- `name`: `@rbinflow/eslint-config`
 - `version`: Versão inicial (ex: `1.0.0`)
 - `private`: `false`
 - `main`: `index.js`
@@ -48,14 +48,14 @@ npm pack
 npm publish --access public
 ```
 
-**Nota**: O flag `--access public` é necessário para pacotes com escopo (`@rd/`) que são públicos.
+**Nota**: O flag `--access public` é necessário para pacotes com escopo (`@rbinflow/`) que são públicos.
 
 ### 4. Verificar publicação
 
 Após a publicação, verifique se o pacote está disponível:
 
-- Acesse: https://www.npmjs.com/package/@rd/eslint-config
-- Ou execute: `npm view @rd/eslint-config`
+- Acesse: https://www.npmjs.com/package/@rbinflow/eslint-config
+- Ou execute: `npm view @rbinflow/eslint-config`
 
 ## Atualizar o Pacote
 
@@ -149,7 +149,7 @@ git push && git push --tags
 
 ### Erro: "You do not have permission to publish"
 
-**Solução**: Verifique se você está logado e tem permissão no escopo `@rd`:
+**Solução**: Verifique se você está logado e tem permissão no escopo `@rbinflow`:
 ```bash
 npm whoami
 npm login
@@ -228,7 +228,7 @@ npm pack
 
 # 2. Em outro projeto, instalar o tarball
 cd ../meu-projeto-teste
-npm install ../rubinho-eslint-config/rd-eslint-config-1.0.0.tgz
+npm install ../rubinho-eslint-config/rbinflow-eslint-config-1.0.0.tgz
 
 # 3. Testar se funciona
 # Criar .eslintrc.js e testar
