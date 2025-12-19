@@ -80,52 +80,194 @@ module.exports = {
 
 ### Usage
 
-#### Basic Setup
+#### Quick Start
 
-Create a `.eslintrc.js` file in the root of your project:
+**You only need ONE file to configure everything:**
 
-```javascript
-module.exports = {
-  extends: ['@rbinflow/eslint-config/react'],
-}
+Create a file named **`.eslintrc.js`** in your project root and add the configuration for your project type.
+
+**Important Notes:**
+- ✅ **Prettier is already included** - No need to create `.prettierrc` or `.prettierrc.js`
+- ✅ **TypeScript is already configured** - No need for separate `tsconfig.json` ESLint settings
+- ✅ **All dependencies are included** - Just install this package and you're ready
+
+---
+
+#### Complete Setup Examples
+
+##### Node.js Project (without semicolons)
+
+**Step 1: Install the package**
+```bash
+npm install --save-dev @rbinflow/eslint-config
 ```
 
-#### Examples by Project Type
+**Step 2: Create configuration file**
 
-**Node.js (without semicolons):**
+**File: `.eslintrc.js`** (create this file in your project root)
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/node'],
 }
 ```
 
-**Node.js (with semicolons):**
+**Your project structure:**
+```
+my-node-project/
+├── .eslintrc.js          ← Create this file with the config above
+├── package.json
+├── src/
+│   └── index.js
+└── ...
+```
+
+**Additional dependencies:** None required (ESLint and Prettier are included)
+
+---
+
+##### Node.js Project (with semicolons)
+
+**Step 1: Install the package**
+```bash
+npm install --save-dev @rbinflow/eslint-config
+```
+
+**Step 2: Create configuration file**
+
+**File: `.eslintrc.js`** (create this file in your project root)
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/node-with-semi'],
 }
 ```
 
-**React:**
+**Your project structure:**
+```
+my-node-project/
+├── .eslintrc.js          ← Create this file with the config above
+├── package.json
+├── src/
+│   └── index.js
+└── ...
+```
+
+**Additional dependencies:** None required (ESLint and Prettier are included)
+
+---
+
+##### React Project
+
+**Step 1: Install the package**
+```bash
+npm install --save-dev @rbinflow/eslint-config
+```
+
+**Step 2: Install React (if not already installed)**
+```bash
+npm install react react-dom
+```
+
+**Step 3: Create configuration file**
+
+**File: `.eslintrc.js`** (create this file in your project root)
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/react'],
 }
 ```
 
-**Next.js:**
+**Your project structure:**
+```
+my-react-app/
+├── .eslintrc.js          ← Create this file with the config above
+├── package.json
+├── src/
+│   ├── App.tsx
+│   └── index.tsx
+└── ...
+```
+
+**Required dependencies:**
+- ✅ `react` and `react-dom` (you must install these)
+
+**Features included:**
+- ✅ Automatic import sorting
+- ✅ Tailwind CSS class ordering
+- ✅ React hooks rules
+- ✅ Accessibility (a11y) rules
+
+---
+
+##### Next.js Project
+
+**Step 1: Install the package**
+```bash
+npm install --save-dev @rbinflow/eslint-config
+```
+
+**Step 2: Install Next.js (if not already installed)**
+```bash
+npm install next react react-dom
+```
+
+**Step 3: Create configuration file**
+
+**File: `.eslintrc.js`** (create this file in your project root)
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/next'],
 }
 ```
 
-**Expo:**
+**Your project structure:**
+```
+my-next-app/
+├── .eslintrc.js          ← Create this file with the config above
+├── package.json
+├── next.config.js
+├── app/
+│   └── page.tsx
+└── ...
+```
+
+**Required dependencies:**
+- ✅ `next`, `react`, and `react-dom` (you must install these)
+
+---
+
+##### Expo/React Native Project
+
+**Step 1: Install the package**
+```bash
+npm install --save-dev @rbinflow/eslint-config
+```
+
+**Step 2: Install Expo (if not already installed)**
+```bash
+npm install expo react react-native
+```
+
+**Step 3: Create configuration file**
+
+**File: `.eslintrc.js`** (create this file in your project root)
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/expo'],
 }
 ```
+
+**Your project structure:**
+```
+my-expo-app/
+├── .eslintrc.js          ← Create this file with the config above
+├── package.json
+├── app.json
+├── App.tsx
+└── ...
+```
+
+**Required dependencies:**
+- ✅ `expo`, `react`, and `react-native` (you must install these)
 
 ### Semicolon Policy
 
@@ -136,29 +278,95 @@ module.exports = {
 
 This policy ensures consistency across frontend projects while allowing flexibility for Node.js projects.
 
+### Frequently Asked Questions (FAQ)
+
+#### Do I need to create a `.prettierrc` file?
+
+**No!** Prettier is already configured and integrated. You don't need any separate Prettier configuration file.
+
+The package handles all Prettier settings automatically. Just create the `.eslintrc.js` file and you're done.
+
+#### Do I need to install ESLint and Prettier separately?
+
+**No!** All dependencies are included in this package:
+- ✅ ESLint
+- ✅ Prettier
+- ✅ TypeScript ESLint
+- ✅ All plugins (React, Import, etc.)
+
+Just install `@rbinflow/eslint-config` and everything works.
+
+#### How do I run ESLint?
+
+Add these scripts to your `package.json`:
+
+```json
+{
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  }
+}
+```
+
+Then run:
+```bash
+npm run lint        # Check for errors
+npm run lint:fix    # Fix errors automatically
+```
+
+#### Does it work with VSCode?
+
+**Yes!** Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and it will automatically:
+- Show errors in the editor
+- Format on save (if configured)
+- Apply fixes on demand
+
+---
+
 ### Advanced Configuration
 
 #### Customize Rules
 
 You can extend and customize the rules:
 
+**File: `.eslintrc.js`**
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/react'],
   rules: {
     // Your custom rules here
     'no-console': 'warn',
+    'react/prop-types': 'off',
   },
 }
 ```
 
-#### Use with Prettier
+#### Override Prettier Settings (Advanced)
 
-Prettier is already integrated into the configurations. For React/Next.js/Expo projects, Tailwind CSS classes are automatically sorted.
+If you really need to override Prettier settings:
+
+**File: `.eslintrc.js`**
+```javascript
+module.exports = {
+  extends: ['@rbinflow/eslint-config/react'],
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        printWidth: 100,  // Override default 80
+        semi: true,       // Override default false (for React)
+      },
+    ],
+  },
+}
+```
+
+**Note:** This is not recommended unless you have specific requirements.
 
 #### TypeScript
 
-All configurations include full TypeScript support through `@typescript-eslint`.
+All configurations include full TypeScript support through `@typescript-eslint`. No additional setup required.
 
 ### VSCode Integration
 
@@ -311,52 +519,194 @@ module.exports = {
 
 ### Uso
 
-#### Configuração Básica
+#### Início Rápido
 
-Crie um arquivo `.eslintrc.js` na raiz do seu projeto:
+**Você precisa de apenas UM arquivo para configurar tudo:**
 
-```javascript
-module.exports = {
-  extends: ['@rbinflow/eslint-config/react'],
-}
+Crie um arquivo chamado **`.eslintrc.js`** na raiz do seu projeto e adicione a configuração para o seu tipo de projeto.
+
+**Notas Importantes:**
+- ✅ **Prettier já está incluído** - Não precisa criar `.prettierrc` ou `.prettierrc.js`
+- ✅ **TypeScript já está configurado** - Não precisa de configurações separadas de ESLint no `tsconfig.json`
+- ✅ **Todas as dependências estão incluídas** - Basta instalar este pacote e está pronto
+
+---
+
+#### Exemplos de Configuração Completa
+
+##### Projeto Node.js (sem ponto e vírgula)
+
+**Passo 1: Instale o pacote**
+```bash
+npm install --save-dev @rbinflow/eslint-config
 ```
 
-#### Exemplos por Tipo de Projeto
+**Passo 2: Crie o arquivo de configuração**
 
-**Node.js (sem ponto e vírgula):**
+**Arquivo: `.eslintrc.js`** (crie este arquivo na raiz do seu projeto)
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/node'],
 }
 ```
 
-**Node.js (com ponto e vírgula):**
+**Estrutura do seu projeto:**
+```
+meu-projeto-node/
+├── .eslintrc.js          ← Crie este arquivo com a config acima
+├── package.json
+├── src/
+│   └── index.js
+└── ...
+```
+
+**Dependências adicionais:** Nenhuma necessária (ESLint e Prettier já incluídos)
+
+---
+
+##### Projeto Node.js (com ponto e vírgula)
+
+**Passo 1: Instale o pacote**
+```bash
+npm install --save-dev @rbinflow/eslint-config
+```
+
+**Passo 2: Crie o arquivo de configuração**
+
+**Arquivo: `.eslintrc.js`** (crie este arquivo na raiz do seu projeto)
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/node-with-semi'],
 }
 ```
 
-**React:**
+**Estrutura do seu projeto:**
+```
+meu-projeto-node/
+├── .eslintrc.js          ← Crie este arquivo com a config acima
+├── package.json
+├── src/
+│   └── index.js
+└── ...
+```
+
+**Dependências adicionais:** Nenhuma necessária (ESLint e Prettier já incluídos)
+
+---
+
+##### Projeto React
+
+**Passo 1: Instale o pacote**
+```bash
+npm install --save-dev @rbinflow/eslint-config
+```
+
+**Passo 2: Instale o React (se ainda não estiver instalado)**
+```bash
+npm install react react-dom
+```
+
+**Passo 3: Crie o arquivo de configuração**
+
+**Arquivo: `.eslintrc.js`** (crie este arquivo na raiz do seu projeto)
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/react'],
 }
 ```
 
-**Next.js:**
+**Estrutura do seu projeto:**
+```
+meu-app-react/
+├── .eslintrc.js          ← Crie este arquivo com a config acima
+├── package.json
+├── src/
+│   ├── App.tsx
+│   └── index.tsx
+└── ...
+```
+
+**Dependências obrigatórias:**
+- ✅ `react` e `react-dom` (você deve instalar estes)
+
+**Recursos incluídos:**
+- ✅ Ordenação automática de imports
+- ✅ Ordenação de classes Tailwind CSS
+- ✅ Regras do React hooks
+- ✅ Regras de acessibilidade (a11y)
+
+---
+
+##### Projeto Next.js
+
+**Passo 1: Instale o pacote**
+```bash
+npm install --save-dev @rbinflow/eslint-config
+```
+
+**Passo 2: Instale o Next.js (se ainda não estiver instalado)**
+```bash
+npm install next react react-dom
+```
+
+**Passo 3: Crie o arquivo de configuração**
+
+**Arquivo: `.eslintrc.js`** (crie este arquivo na raiz do seu projeto)
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/next'],
 }
 ```
 
-**Expo:**
+**Estrutura do seu projeto:**
+```
+meu-app-next/
+├── .eslintrc.js          ← Crie este arquivo com a config acima
+├── package.json
+├── next.config.js
+├── app/
+│   └── page.tsx
+└── ...
+```
+
+**Dependências obrigatórias:**
+- ✅ `next`, `react` e `react-dom` (você deve instalar estes)
+
+---
+
+##### Projeto Expo/React Native
+
+**Passo 1: Instale o pacote**
+```bash
+npm install --save-dev @rbinflow/eslint-config
+```
+
+**Passo 2: Instale o Expo (se ainda não estiver instalado)**
+```bash
+npm install expo react react-native
+```
+
+**Passo 3: Crie o arquivo de configuração**
+
+**Arquivo: `.eslintrc.js`** (crie este arquivo na raiz do seu projeto)
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/expo'],
 }
 ```
+
+**Estrutura do seu projeto:**
+```
+meu-app-expo/
+├── .eslintrc.js          ← Crie este arquivo com a config acima
+├── package.json
+├── app.json
+├── App.tsx
+└── ...
+```
+
+**Dependências obrigatórias:**
+- ✅ `expo`, `react` e `react-native` (você deve instalar estes)
 
 ### Política de Ponto e Vírgula
 
@@ -367,29 +717,95 @@ module.exports = {
 
 Esta política garante consistência entre projetos frontend enquanto permite flexibilidade para projetos Node.js.
 
+### Perguntas Frequentes (FAQ)
+
+#### Preciso criar um arquivo `.prettierrc`?
+
+**Não!** O Prettier já está configurado e integrado. Você não precisa de nenhum arquivo de configuração separado do Prettier.
+
+O pacote cuida de todas as configurações do Prettier automaticamente. Apenas crie o arquivo `.eslintrc.js` e está pronto.
+
+#### Preciso instalar ESLint e Prettier separadamente?
+
+**Não!** Todas as dependências estão incluídas neste pacote:
+- ✅ ESLint
+- ✅ Prettier
+- ✅ TypeScript ESLint
+- ✅ Todos os plugins (React, Import, etc.)
+
+Basta instalar `@rbinflow/eslint-config` e tudo funciona.
+
+#### Como executar o ESLint?
+
+Adicione estes scripts ao seu `package.json`:
+
+```json
+{
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  }
+}
+```
+
+Depois execute:
+```bash
+npm run lint        # Verificar erros
+npm run lint:fix    # Corrigir erros automaticamente
+```
+
+#### Funciona com VSCode?
+
+**Sim!** Instale a [extensão ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) e ela automaticamente:
+- Mostra erros no editor
+- Formata ao salvar (se configurado)
+- Aplica correções sob demanda
+
+---
+
 ### Configurações Avançadas
 
 #### Personalizar Regras
 
 Você pode estender e personalizar as regras:
 
+**Arquivo: `.eslintrc.js`**
 ```javascript
 module.exports = {
   extends: ['@rbinflow/eslint-config/react'],
   rules: {
     // Suas regras personalizadas aqui
     'no-console': 'warn',
+    'react/prop-types': 'off',
   },
 }
 ```
 
-#### Usar com Prettier
+#### Sobrescrever Configurações do Prettier (Avançado)
 
-O Prettier já está integrado nas configurações. Para projetos React/Next.js/Expo, as classes Tailwind CSS são automaticamente ordenadas.
+Se você realmente precisar sobrescrever as configurações do Prettier:
+
+**Arquivo: `.eslintrc.js`**
+```javascript
+module.exports = {
+  extends: ['@rbinflow/eslint-config/react'],
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        printWidth: 100,  // Sobrescrever padrão 80
+        semi: true,       // Sobrescrever padrão false (para React)
+      },
+    ],
+  },
+}
+```
+
+**Nota:** Isso não é recomendado a menos que você tenha requisitos específicos.
 
 #### TypeScript
 
-Todas as configurações incluem suporte completo para TypeScript através de `@typescript-eslint`.
+Todas as configurações incluem suporte completo para TypeScript através de `@typescript-eslint`. Nenhuma configuração adicional necessária.
 
 ### Integração com VSCode
 
