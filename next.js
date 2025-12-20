@@ -9,6 +9,8 @@ module.exports = {
     jest: true,
   },
   extends: [
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
     'standard',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
@@ -22,6 +24,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
+    'react',
     'jsx-a11y',
     '@typescript-eslint',
     'import',
@@ -30,6 +33,7 @@ module.exports = {
   rules: {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
+    'react/self-closing-comp': 'error',
     'prettier/prettier': [
       'error',
       {
@@ -46,6 +50,10 @@ module.exports = {
         plugins: ['prettier-plugin-tailwindcss'],
       },
     ],
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'react/display-name': 'off',
+    'react/no-unescaped-entities': 'warn',
     'import/no-unresolved': 'off',
     'import/no-duplicates': 'error',
     '@typescript-eslint/no-unused-vars': [
@@ -75,6 +83,9 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'warn',
     'jsx-a11y/heading-has-content': 'warn',
     'jsx-a11y/iframe-has-title': 'warn',
+    'react/jsx-key': 'error',
+    'react/no-array-index-key': 'warn',
+    'react/no-danger': 'warn',
     'react/no-unknown-property': 'error',
   },
   settings: {
