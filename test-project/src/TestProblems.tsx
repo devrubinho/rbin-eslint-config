@@ -1,5 +1,4 @@
 import './App.css'
-
 import React, { useState } from 'react'
 
 const TestProblems = () => {
@@ -12,13 +11,9 @@ const TestProblems = () => {
 
   console.log(unusedVar)
 
-  const foo = 1
-
   return (
     <div className="flex items-center rounded-lg bg-blue-500 p-4 text-white">
-      {' '}
       <button onClick={handleClick} className="roundbg-red-500 px-4 py-2">
-        {' '}
         Count: {count}
       </button>
     </div>

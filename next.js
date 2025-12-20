@@ -25,26 +25,11 @@ module.exports = {
     'jsx-a11y',
     '@typescript-eslint',
     'import',
+    'simple-import-sort',
   ],
   rules: {
-    'import/order': [
-      'error',
-      {
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-        ],
-        'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true,
-        },
-      },
-    ],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
     'prettier/prettier': [
       'error',
       {
