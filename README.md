@@ -438,18 +438,18 @@ This is a private package used internally. For suggestions or improvements, plea
 
 ### License
 
-MIT © Rubinho
+MIT © Rubens Oliveira
 
 ### Links
 
 - [npm](https://www.npmjs.com/package/@rbinflow/eslint-config)
-- [Repository](https://github.com/devrubinho/rbin-eslint-config)
+- [Repository](https://github.com/rbinoliveira/rbin-eslint-config)
 
 ---
 
 <div align="center">
 
-**Developed with ❤️ by Rubinho**
+**Developed with ❤️ by Rubens Oliveira**
 
 </div>
 
@@ -877,17 +877,17 @@ Este é um pacote privado usado internamente. Para sugestões ou melhorias, abra
 
 ### Licença
 
-MIT © Rubinho
+MIT © Rubens Oliveira
 
 ### Links
 
 - [npm](https://www.npmjs.com/package/@rbinflow/eslint-config)
-- [Repositório](https://github.com/devrubinho/rbin-eslint-config)
+- [Repositório](https://github.com/rbinoliveira/rbin-eslint-config)
 
 ---
 
 <div align="center">
 
-**Desenvolvido com ❤️ por Rubinho**
+**Desenvolvido com ❤️ por Rubens Oliveira**
 
 </div>

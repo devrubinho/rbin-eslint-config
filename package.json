@@ -2,7 +2,7 @@
   "name": "@rbinflow/eslint-config",
   "version": "1.0.6",
   "private": false,
-  "description": "ESLint configuration used by Rubinho.",
+  "description": "ESLint configuration used by Rubens Oliveira.",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
@@ -26,7 +26,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/devrubinho/rbin-eslint-config.git"
+    "url": "https://github.com/rbinoliveira/rbin-eslint-config.git"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.50.0",
